@@ -1,6 +1,6 @@
 # web-fresh
 
-A multi-user blog system, based on deno and fresh
+A multi-user note and bookmark system based on deno and fresh
 
 ## Technologies
 
