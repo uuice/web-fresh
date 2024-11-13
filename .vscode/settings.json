@@ -19,6 +19,11 @@
     ],
     "cSpell.words": [
         "deno",
+        "Insertable",
+        "kysely",
+        "preact",
+        "tailwindcss",
+        "Updateable",
         "uuice"
     ]
 }

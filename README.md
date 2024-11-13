@@ -1,13 +1,17 @@
 # web-fresh
 
-一个多用户的博客系统， 基于deno、fresh开发
+A multi-user blog system, based on deno and fresh
 
-Your new Fresh project is ready to go. You can follow the Fresh "Getting
-Started" guide here: https://fresh.deno.dev/docs/getting-started
+## Technologies
+
+- fresh <https://fresh.deno.dev/docs/getting-started>
+- deno <https://docs.deno.com/>
+- tailwindcss <https://tailwindcss.com/>
+- kysely <https://kysely.dev/docs/intro>
 
 ## Usage
 
-Make sure to install Deno: https://deno.land/manual/getting_started/installation
+Make sure to install Deno: <https://deno.land/manual/getting_started/installation>
 
 Then start the project:
 
