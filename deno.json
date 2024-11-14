@@ -1,40 +1,54 @@
 {
-    "lock": false,
-    "tasks": {
-        "check": "deno fmt --check && deno lint && deno check **/*.ts && deno check **/*.tsx",
-        "cli": "echo \"import '\\$fresh/src/dev/cli.ts'\" | deno run --unstable -A -",
-        "manifest": "deno task cli manifest $(pwd)",
-        "start": "deno run --env-file=.dev.env -A --watch=static/,routes/ dev.ts",
-        "build": "deno run --env-file .prod.env -A dev.ts build",
-        "preview": "deno run --env-file .preview.env -A main.ts",
-        "update": "deno run -A -r https://fresh.deno.dev/update ."
-    },
-    "lint": { "rules": { "tags": ["fresh", "recommended"] } },
-    "fmt": {
-        "options": {
-            "useTabs": false,
-            "lineWidth": 80,
-            "indentWidth": 4,
-            "semiColons": false,
-            "singleQuote": true,
-            "proseWrap": "preserve"
-        }
-    },
-    "exclude": ["**/_fresh/*"],
-    "imports": {
-        "$fresh/": "https://deno.land/x/fresh@1.7.3/",
-        "kysely": "npm:kysely@^0.27.4",
-        "pg": "npm:pg@^8.13.1",
-        "pg-pool": "npm:pg-pool@^3.7.0",
-        "preact": "https://esm.sh/preact@10.22.0",
-        "preact/": "https://esm.sh/preact@10.22.0/",
-        "@preact/signals": "https://esm.sh/*@preact/signals@1.2.2",
-        "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.1",
-        "tailwindcss": "npm:tailwindcss@3.4.1",
-        "tailwindcss/": "npm:/tailwindcss@3.4.1/",
-        "tailwindcss/plugin": "npm:/tailwindcss@3.4.1/plugin.js",
-        "$std/": "https://deno.land/std@0.216.0/"
-    },
-    "compilerOptions": { "jsx": "react-jsx", "jsxImportSource": "preact" },
-    "nodeModulesDir": "auto"
+  "lock": false,
+  "tasks": {
+    "check": "deno fmt --check && deno lint && deno check **/*.ts && deno check **/*.tsx",
+    "cli": "echo \"import '\\$fresh/src/dev/cli.ts'\" | deno run --unstable -A -",
+    "manifest": "deno task cli manifest $(pwd)",
+    "start": "deno run --env-file=.dev.env -A --watch=static/,routes/ dev.ts",
+    "build": "deno run --env-file .prod.env -A dev.ts build",
+    "preview": "deno run --env-file .preview.env -A main.ts",
+    "update": "deno run -A -r https://fresh.deno.dev/update ."
+  },
+  "lint": { "rules": { "tags": ["fresh", "recommended"] } },
+  "fmt": {
+    "options": {
+      "useTabs": false,
+      "lineWidth": 80,
+      "indentWidth": 4,
+      "semiColons": false,
+      "singleQuote": true,
+      "proseWrap": "preserve"
+    }
+  },
+  "exclude": ["**/_fresh/*"],
+  "imports": {
+    "$fresh/": "https://deno.land/x/fresh@1.7.3/",
+    "kysely": "npm:kysely@^0.27.4",
+    "pg": "npm:pg@^8.13.1",
+    "pg-pool": "npm:pg-pool@^3.7.0",
+    "@preact/signals": "https://esm.sh/*@preact/signals@1.2.2",
+    "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.1",
+    "tailwindcss": "npm:tailwindcss@3.4.1",
+    "tailwindcss/": "npm:/tailwindcss@3.4.1/",
+    "tailwindcss/plugin": "npm:/tailwindcss@3.4.1/plugin.js",
+    "$std/": "https://deno.land/std@0.216.0/",
+    "preact": "https://esm.sh/preact@10.23.1",
+    "preact/": "https://esm.sh/preact@10.23.1/",
+    "react": "https://esm.sh/preact@10.23.1/compat",
+    "react/": "https://esm.sh/preact@10.23.1/compat/",
+    "react/jsx-runtime": "https://esm.sh/preact@10.23.1/compat/jsx-runtime",
+    "react-dom/test-utils": "https://esm.sh/preact@10.23.1/test-utils",
+    "react-dom": "https://esm.sh/preact@10.23.1/compat",
+    "react-dom/": "https://esm.sh/preact@10.23.1/compat/",
+    "@emotion/react": "https://esm.sh/@emotion/react@^11.13.3?alias=react:preact/compat,react/:preact/compat/,react-dom:preact/compat,react-dom/:preact/compat/,react/jsx-runtime:preact/compat/jsx-runtime,@types/react:preact/compat&external=preact&deps=preact@10.23.1",
+    "@emotion/styled": "https://esm.sh/@emotion/styled@^11.13.0?alias=react:preact/compat,react/:preact/compat/,react-dom:preact/compat,react-dom/:preact/compat/,react/jsx-runtime:preact/compat/jsx-runtime,@types/react:preact/compat&external=preact&deps=preact@10.23.1",
+    "@mui/material": "https://esm.sh/@mui/material@^6.1.7?alias=react:preact/compat,react/:preact/compat/,react-dom:preact/compat,react-dom/:preact/compat/,react/jsx-runtime:preact/compat/jsx-runtime,@types/react:preact/compat&external=preact&deps=preact@10.23.1",
+    "@mui/styled-engine-sc": "https://esm.sh/@mui/styled-engine-sc@^6.1.7?alias=react:preact/compat,react/:preact/compat/,react-dom:preact/compat,react-dom/:preact/compat/,react/jsx-runtime:preact/compat/jsx-runtime,@types/react:preact/compat&external=preact&deps=preact@10.23.1",
+    "styled-components": "https://esm.sh/styled-components@^6.1.13?alias=react:preact/compat,react/:preact/compat/,react-dom:preact/compat,react-dom/:preact/compat/,react/jsx-runtime:preact/compat/jsx-runtime,@types/react:preact/compat&external=preact&deps=preact@10.23.1"
+  },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
+  },
+  "nodeModulesDir": "auto"
 }

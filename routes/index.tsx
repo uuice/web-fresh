@@ -1,5 +1,5 @@
 import { useSignal } from '@preact/signals'
-
+import Counter from '../islands/Counter.tsx'
 export default function Index() {
     const isDevelopment = Deno.env.get('ENV') === 'development'
     console.log(isDevelopment, 'isDevelopment')
@@ -11,6 +11,8 @@ export default function Index() {
             Index 12222{isDevelopment ? '开发' : '生产'}
             Index 12222{isDev ? '开发' : '生产'}
             Index 12222{isDev.toString()}
+
+            <Counter></Counter>
         </div>
     )
 }
